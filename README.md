@@ -30,4 +30,5 @@
 ## 🏗️ System Architecture
 
 SENSIE operates on a three-tier architecture: **Edge Sensing & Processing**, **Wireless Transmission**, and **Cloud Logging & Visualization**.
+---
  ![SENSIE Wearable](SENSIE_MEDIA/view2.png) 
