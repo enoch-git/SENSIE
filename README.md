@@ -12,10 +12,8 @@
 
 ## 📸 Product Preview
 
-<!-- Replace these placeholders with actual photos/renders in your /assets folder -->
-| Assembled Wearable | Custom PCB Layout (KiCad 9) | Health Dashboard |
-| :---: | :---: | :---: |
-| ![SENSIE Wearable](assets/wearable-front.png) | ![PCB Routing](assets/pcb-routing.png) | ![Flask Dashboard](assets/dashboard-preview.png) |
+
+ ![SENSIE Wearable](SENSIE_MEDIA/.png) 
 
 ---
 
