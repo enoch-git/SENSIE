@@ -12,8 +12,9 @@
 
 ## 📸 Product Preview
 
-
- ![SENSIE Wearable](SENSIE_MEDIA/view3.png) 
+| Assembled Wearable | Custom PCB Layout (KiCad 9) | Health Dashboard |
+| :---: | :---: | :---: |
+| ![SENSIE Wearable](SENSIE_MEDIA/view3.png) | ![PCB Routing](SENSIE_MEDIA/view4.png) 
 
 ---
 
@@ -30,5 +31,28 @@
 ## 🏗️ System Architecture
 
 SENSIE operates on a three-tier architecture: **Edge Sensing & Processing**, **Wireless Transmission**, and **Cloud Logging & Visualization**.
----
- ![SENSIE Wearable](SENSIE_MEDIA/view2.png) 
+
+```text
++-----------------------------------------------------------------+
+|                       SENSIE WRISTBAND                          |
+|                                                                 |
+|  +----------------+      I2C      +--------------------------+  |
+|  | MAX30102       | ------------> | ESP32-S3-WROOM-1         |  |
+|  | (HR & SpO2)    |               | (C++ / Moving Average)   |  |
+|  +----------------+               +--------------------------+  |
+|                                                 |               |
+|  +----------------+                             | Wi-Fi         |
+|  | TP4056 ESOP8   | <--- Li-Ion Battery         | (HTTP/REST)   |
+|  +----------------+                             |               |
++-------------------------------------------------|---------------+
+                                                  v
+                                    +--------------------------+
+                                    | Python / Flask Server    |
+                                    | (API & Data Processing)  |
+                                    +--------------------------+
+                                                  |
+                                                  v
+                                    +--------------------------+
+                                    | Caregiver Dashboard      |
+                                    | (History & Alert Logs)   |
+                                    +--------------------------+
